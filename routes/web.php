@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use PHPUnit\Event\Code\Test;
 
-Route::get('/', function () {
-    //return view('welcome');
-    print "Olá mundo!";
-});
+
+Route::get('/', [UserController::class, 'formLogin'])->name('formLogin');
+Route::post('/', [UserController::class, 'login'])->name('login');;

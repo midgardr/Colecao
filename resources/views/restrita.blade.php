@@ -1,1 +1,4 @@
-<a href="{{ route('logoff') }}">SAIR</a>
+@extends('template')
+@section('conteudo')
+    CONTEÚDO
+@endsection

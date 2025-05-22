@@ -9,6 +9,7 @@
     <title>Coleção</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
     <meta name="theme-color" content="#712cf9">
 </head>
 <body>
@@ -24,7 +25,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">COLEÇÕES</a>
+                                    <a class="nav-link active" aria-current="page" href="{{ route('colecoes') }}">COLEÇÕES</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">CATEGORIAS</a>

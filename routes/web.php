@@ -12,6 +12,13 @@ Route::post('/', [UserController::class, 'login'])->name('login');
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [UserController::class, 'logout'])->name('logoff');
     Route::get('/restrita', [UserController::class, 'restrita'])->name('restrita');
-    Route::get('colecoes', [ColecaoController::class, 'index'])->name('colecoes');
+    Route::prefix('colecoes')->group(function(){
+        Route::get('{eLixeira?}', [ColecaoController::class, 'index'])->name('colecoes');
+        Route::post('store', [ColecaoController::class, 'store'])->name('colecoes.store');
+        Route::get('edit/{colecao}', [ColecaoController::class, 'edit'])->name('colecoes.edit');
+        Route::put('update/{colecao}', [ColecaoController::class, 'update'])->name('colecoes.update');
+        Route::get('delete/{colecao}', [ColecaoController::class, 'delete'])->name('colecoes.delete');
+        Route::get('restore/{colecao}', [ColecaoController::class, 'restore'])->name('colecoes.restore');
+    });
 });
 

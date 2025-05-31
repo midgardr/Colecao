@@ -34,7 +34,7 @@
                                     <a class="nav-link" href="{{ route('prateleiras') }}">PRATELEIRAS</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">FIGURAS</a>
+                                    <a class="nav-link" href="{{ route('figuras') }}">FIGURAS</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">SAIR</a>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ColecaoController;
+use App\Http\Controllers\FiguraController;
 use App\Http\Controllers\PrateleiraController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,11 @@ Route::middleware('auth')->group(function () {
         Route::get('{eLixeira?}', [PrateleiraController::class, 'index'])->name('prateleiras');
         Route::get('delete/{prateleira}', [PrateleiraController::class, 'delete'])->name('prateleiras.delete');
         Route::get('restore/{prateleira}', [PrateleiraController::class, 'restore'])->name('prateleiras.restore');
+    });
+    Route::prefix('figuras')->group(function(){
+        Route::get('{eLixeira?}', [FiguraController::class, 'index'])->name('figuras');
+        Route::get('delete/{figura}', [FiguraController::class, 'delete'])->name('figuras.delete');
+        Route::get('restore/{figura}', [FiguraController::class, 'restore'])->name('figuras.restore');
     });
 });
 

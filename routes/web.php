@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ColecaoController;
+use App\Http\Controllers\PrateleiraController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\Event\Code\Test;
@@ -25,6 +26,11 @@ Route::middleware('auth')->group(function () {
         Route::get('{eLixeira?}', [CategoriaController::class, 'index'])->name('categorias');
         Route::get('delete/{categoria}', [CategoriaController::class, 'delete'])->name('categorias.delete');
         Route::get('restore/{categoria}', [CategoriaController::class, 'restore'])->name('categorias.restore');
+    });
+    Route::prefix('prateleiras')->group(function(){
+        Route::get('{eLixeira?}', [PrateleiraController::class, 'index'])->name('prateleiras');
+        Route::get('delete/{prateleira}', [PrateleiraController::class, 'delete'])->name('prateleiras.delete');
+        Route::get('restore/{prateleira}', [PrateleiraController::class, 'restore'])->name('prateleiras.restore');
     });
 });
 

@@ -31,7 +31,7 @@
                                     <a class="nav-link" href="{{ route('categorias') }}">CATEGORIAS</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">PRATELEIRAS</a>
+                                    <a class="nav-link" href="{{ route('prateleiras') }}">PRATELEIRAS</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">FIGURAS</a>

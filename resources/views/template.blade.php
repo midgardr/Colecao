@@ -28,7 +28,7 @@
                                     <a class="nav-link active" aria-current="page" href="{{ route('colecoes') }}">COLEÇÕES</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">CATEGORIAS</a>
+                                    <a class="nav-link" href="{{ route('categorias') }}">CATEGORIAS</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">PRATELEIRAS</a>

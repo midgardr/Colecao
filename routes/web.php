@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ColecaoController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,11 @@ Route::middleware('auth')->group(function () {
         Route::put('update/{colecao}', [ColecaoController::class, 'update'])->name('colecoes.update');
         Route::get('delete/{colecao}', [ColecaoController::class, 'delete'])->name('colecoes.delete');
         Route::get('restore/{colecao}', [ColecaoController::class, 'restore'])->name('colecoes.restore');
+    });
+    Route::prefix('categorias')->group(function(){
+        Route::get('{eLixeira?}', [CategoriaController::class, 'index'])->name('categorias');
+        Route::get('delete/{categoria}', [CategoriaController::class, 'delete'])->name('categorias.delete');
+        Route::get('restore/{categoria}', [CategoriaController::class, 'restore'])->name('categorias.restore');
     });
 });
 
